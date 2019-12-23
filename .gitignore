@@ -1,0 +1,16 @@
+# Experiment and dataset folders
+dataset/
+models/
+outputs/
+derm7pt/
+
+# Extensions
+*.jpg
+*.jpeg
+*.png
+*.h5
+*.npy
+
+# Others
+__pycache__
+.ipynb_checkpoints
