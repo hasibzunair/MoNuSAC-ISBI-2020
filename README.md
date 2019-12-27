@@ -2,7 +2,7 @@
 ISBI 2020 Challenge
 
 
-Enviromnets installations
+Environment installations
 ```
 conda env export > <environment-name>.yml    
 conda env create -f <environment-name>.yml
