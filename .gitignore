@@ -2,14 +2,6 @@
 dataset/
 models/
 outputs/
-derm7pt/
-
-# Extensions
-*.jpg
-*.jpeg
-*.png
-*.h5
-*.npy
 
 # Others
 __pycache__
