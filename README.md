@@ -15,11 +15,14 @@ conda env create -f <environment-name>.yml
 
 ### Run this
 
+0. Clone repository
 1. Make `dataset` folder
 2. Put `MoNuSAC_images_and_annotations` in `dataset` folder
 3. Run `get_masks.ipynb`. You should get the MoNuSAC_masks folder in dataset
-4. Run `data_process_MoNuSAC.ipynb`. 
-5. ....
+4. Run `data_process_MoNuSAC.ipynb` to get raw images and their ground truth masks. 
+5. Run `extract_patches.ipynb` to get patches of images and gt masks from the previous raw version.
+6. ...
+7. ...
 
 
 More info coming soon.
