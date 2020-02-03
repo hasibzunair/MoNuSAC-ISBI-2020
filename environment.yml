@@ -1,17 +1,21 @@
 name: isbi2020
 channels:
   - bioconda
+  - anaconda
   - conda-forge
   - defaults
 dependencies:
   - _anaconda_depends=2019.03=py36_0
   - _libgcc_mutex=0.1=main
+  - _tflow_select=2.1.0=gpu
+  - absl-py=0.8.1=py36_0
   - alabaster=0.7.12=py36_0
   - anaconda=custom=py36_1
   - anaconda-client=1.7.2=py36_0
   - anaconda-project=0.8.4=py_0
   - argh=0.26.2=py36_0
   - asn1crypto=1.2.0=py36_0
+  - astor=0.8.0=py36_0
   - astroid=2.3.3=py36_0
   - astropy=3.2.3=py36h7b6447c_0
   - atomicwrites=1.3.0=py36_1
@@ -32,6 +36,7 @@ dependencies:
   - boto=2.49.0=py36_0
   - bottleneck=1.3.1=py36hdd07704_0
   - bzip2=1.0.8=h7b6447c_0
+  - c-ares=1.15.0=h7b6447c_1001
   - ca-certificates=2019.11.28=hecc5488_0
   - cairo=1.14.12=h8948797_3
   - certifi=2019.11.28=py36_0
@@ -43,6 +48,9 @@ dependencies:
   - colorama=0.4.3=py_0
   - contextlib2=0.6.0.post1=py_0
   - cryptography=2.8=py36h1ba5d50_0
+  - cudatoolkit=10.0.130=0
+  - cudnn=7.6.5=cuda10.0_0
+  - cupti=10.0.130=0
   - curl=7.67.0=hbc83047_0
   - cycler=0.10.0=py36_0
   - cython=0.29.14=py36he6710b0_0
@@ -68,6 +76,7 @@ dependencies:
   - fribidi=1.0.5=h7b6447c_0
   - fsspec=0.6.2=py_0
   - future=0.18.2=py36_0
+  - gast=0.2.2=py36_0
   - gdk-pixbuf=2.32.2=1
   - geos=3.8.0=he1b5a44_0
   - get_terminal_size=1.0.0=haa9412d_0
@@ -77,8 +86,10 @@ dependencies:
   - gmpy2=2.0.8=py36h10f8cd9_2
   - gnutls=3.5.19=h2a4e5f8_1
   - gobject-introspection=1.56.1=py36hbc4ca2d_2
+  - google-pasta=0.1.8=py_0
   - graphite2=1.3.13=h23475e2_0
   - greenlet=0.4.15=py36h7b6447c_0
+  - grpcio=1.16.1=py36hf8bcb03_1
   - gst-plugins-base=1.14.0=hbbd80ab_1
   - gstreamer=1.14.0=hb453b48_1
   - h5py=2.8.0=py36h3010b51_1003
@@ -116,6 +127,9 @@ dependencies:
   - jupyter_core=4.6.1=py36_0
   - jupyterlab=1.2.4=pyhf63ae98_0
   - jupyterlab_server=1.0.6=py_0
+  - keras=2.3.1=py36_0
+  - keras-applications=1.0.8=py_0
+  - keras-preprocessing=1.1.0=py_1
   - keyring=20.0.0=py36_0
   - kiwisolver=1.1.0=py36he6710b0_0
   - krb5=1.16.4=h173b8e3_0
@@ -128,9 +142,11 @@ dependencies:
   - libgfortran=3.0.0=1
   - libgfortran-ng=7.3.0=hdf63c60_0
   - libglu=9.0.0=hf484d3e_1000
+  - libgpuarray=0.7.6=h14c3975_1003
   - libiconv=1.15=h516909a_1005
   - libopencv=3.4.2=hb342d67_1
   - libpng=1.6.37=hbc83047_0
+  - libprotobuf=3.11.2=hd408876_0
   - libsodium=1.0.16=h1bed415_0
   - libspatialindex=1.9.3=he6710b0_0
   - libssh2=1.8.2=h1ba5d50_0
@@ -146,6 +162,8 @@ dependencies:
   - lxml=4.4.2=py36hefd8a0e_0
   - lz4-c=1.8.1.2=h14c3975_0
   - lzo=2.10=h49e0be7_2
+  - mako=1.1.0=py_0
+  - markdown=3.1.1=py36_0
   - markupsafe=1.1.1=py36h7b6447c_0
   - matplotlib=3.1.1=py36h5429711_0
   - mccabe=0.6.1=py36_1
@@ -181,7 +199,8 @@ dependencies:
   - openpyxl=3.0.2=py_0
   - openslide=3.4.1=2
   - openslide-python=1.1.1=py36h470a237_0
-  - openssl=1.1.1d=h516909a_0
+  - openssl=1.1.1=h7b6447c_0
+  - opt_einsum=3.1.0=py_0
   - packaging=19.2=py_0
   - pandas=0.25.3=py36he6710b0_0
   - pandoc=2.2.3.2=0
@@ -205,6 +224,7 @@ dependencies:
   - ply=3.11=py36_0
   - prometheus_client=0.7.1=py_0
   - prompt_toolkit=2.0.9=py36_0
+  - protobuf=3.11.2=py36he6710b0_0
   - psutil=5.6.7=py36h7b6447c_0
   - ptyprocess=0.6.0=py36_0
   - py=1.8.0=py36_0
@@ -217,6 +237,7 @@ dependencies:
   - pydocstyle=4.0.1=py_0
   - pyflakes=2.1.1=py36_0
   - pygments=2.5.2=py_0
+  - pygpu=0.7.6=py36hc1659b7_1000
   - pylint=2.4.4=py36_0
   - pympler=0.7=py_0
   - pyodbc=4.0.27=py36he6710b0_0
@@ -286,8 +307,15 @@ dependencies:
   - sympy=1.5=py36_0
   - tbb=2019.8=hfd86e86_0
   - tblib=1.6.0=py_0
+  - tensorboard=2.0.0=pyhb38c66f_1
+  - tensorflow=2.0.0=gpu_py36h6b29c10_0
+  - tensorflow-base=2.0.0=gpu_py36h0ec5d1f_0
+  - tensorflow-estimator=2.0.0=pyh2649769_0
+  - tensorflow-gpu=2.0.0=h0d30ee6_0
+  - termcolor=1.1.0=py36_1
   - terminado=0.8.3=py36_0
   - testpath=0.4.4=py_0
+  - theano=0.9.0=py36_1
   - tk=8.6.8=hbc83047_0
   - toolz=0.10.0=py_0
   - tornado=6.0.3=py36h7b6447c_0
