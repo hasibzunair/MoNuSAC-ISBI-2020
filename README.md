@@ -12,6 +12,10 @@ conda env create -f <environment-name>.yml
 `MoNuSAC_images_and_annotations` : contains original dataset
 `MoNuSAC_masks` : contains binary masks generated from get_mask.ipynb
 `data_processedv0` : contains all raw images and the ground truth masks in two folders
+`data_processedv1` : patchwise data from `data_processedv0`
+`data_processedv2` : trainval split from `data_processedv0`
+`data_processedv3` : trainval split from `data_processedv1`
+
 
 ### Run this
 
@@ -21,8 +25,7 @@ conda env create -f <environment-name>.yml
 3. Run `get_masks.ipynb`. You should get the MoNuSAC_masks folder in dataset
 4. Run `data_process_MoNuSAC.ipynb` to get raw images and their ground truth masks. 
 5. Run `extract_patches.ipynb` to get patches of images and gt masks from the previous raw version.
-6. ...
+6. Run `trainval_split.iynb` to split dataset.
 7. ...
-
 
 More info coming soon.
