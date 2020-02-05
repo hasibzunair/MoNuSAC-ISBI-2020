@@ -2,6 +2,8 @@
 dataset/
 models/
 outputs/
+logs/
+
 
 # Others
 __pycache__
