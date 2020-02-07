@@ -13,10 +13,11 @@ conda env create -f <environment-name>.yml
 * `MoNuSAC_masks` : contains binary masks generated from `get_mask.ipynb`.
 * `data_processedv0` : contains all raw images and the ground truth masks in two folders.
 * `data_processedv1` : (NOT USING NOW) patchwise data from `data_processedv0`.
-* `data_processedv2` : (NOT USING NOW) trainval split from `data_processedv0`.
+* `data_processedv2` : trainval split from `data_processedv0`.
 * `data_processedv3` : (NOT USING NOW) trainval split from `data_processedv1`.
-* `data_processedv4` : sliding window patchwise data from original images and masks in `data_processedv0`.
+* `data_processedv4` : (TRAIN FINAL MODEL ON WHOLE PATCH DATA) sliding window patchwise data from original images and masks in `data_processedv0`.
 * `data_processedv5` : trainval split from `data_processedv4`.
+* `data_processedvpl` : patchwise and trainval split from `data_processedv2`.
 
 
 ### Run this
