@@ -20,7 +20,7 @@ conda env create -f <environment-name>.yml
 * `data_processedvpl` : patchwise and trainval split from `data_processedv2`.
 
 
-### Run this
+### Getting started
 
 0. Clone repository
 1. Make `dataset` folder
