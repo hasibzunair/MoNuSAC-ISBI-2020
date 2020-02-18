@@ -1,10 +1,13 @@
 ### MoNuSAC-ISBI-2020
-ISBI 2020 Challenge
+
+
+Challenge code for Multi-organ Nuclei Segmentation and Classification Challenge 2020.
 
 ### Environment installations
-```
-conda env export > <environment-name>.yml    
-conda env create -f <environment-name>.yml
+
+Run this command to make environment
+
+```conda env create -f environment.yml
 ```
 
 ### Dataset
@@ -28,7 +31,8 @@ conda env create -f <environment-name>.yml
 3. Run `0_get_masks.ipynb`. You should get the MoNuSAC_masks folder in dataset
 4. Run `1_data_process_MoNuSAC.ipynb` to get raw images and their ground truth masks. 
 5. Run `2b_extract_patches.ipynb` to get patches of images and gt masks from the previous raw version.
-6. Run `5_train.iynb`. It trains on `data_processedv5`
-7. Run `6b_inference.ipynb` to get final prediction masks.
+6. Run `5_train.iynb`. It trains on `data_processedv5`.
+7. Put `Testing Images` in `dataset` folder.
+8. Run `6b_inference.ipynb` to get final prediction masks.
 
-More info coming soon.
+More documentation coming soon.
