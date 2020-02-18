@@ -25,10 +25,10 @@ conda env create -f <environment-name>.yml
 0. Clone repository
 1. Make `dataset` folder
 2. Put `MoNuSAC_images_and_annotations` in `dataset` folder
-3. Run `get_masks.ipynb`. You should get the MoNuSAC_masks folder in dataset
-4. Run `data_process_MoNuSAC.ipynb` to get raw images and their ground truth masks. 
-5. Run `extract_patches.ipynb` to get patches of images and gt masks from the previous raw version.
-6. Run `trainval_split.iynb` to split dataset.
-7. ...
+3. Run `0_get_masks.ipynb`. You should get the MoNuSAC_masks folder in dataset
+4. Run `1_data_process_MoNuSAC.ipynb` to get raw images and their ground truth masks. 
+5. Run `2b_extract_patches.ipynb` to get patches of images and gt masks from the previous raw version.
+6. Run `5_train.iynb`. It trains on `data_processedv5`
+7. Run `6b_inference.ipynb` to get final prediction masks.
 
 More info coming soon.
