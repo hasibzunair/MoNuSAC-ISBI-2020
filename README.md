@@ -7,7 +7,8 @@ Challenge code for Multi-organ Nuclei Segmentation and Classification Challenge 
 
 Run this command to make environment
 
-```conda env create -f environment.yml
+```
+conda env create -f environment.yml
 ```
 
 ### Dataset
