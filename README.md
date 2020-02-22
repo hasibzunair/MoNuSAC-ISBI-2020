@@ -21,6 +21,7 @@ Or you can make a new environment by:
 
 ```conda create -n yourenvname python=3.6 anaconda
 ```
+
 Then install the packages
 
 ```
