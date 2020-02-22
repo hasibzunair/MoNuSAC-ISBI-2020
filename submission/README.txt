@@ -1,10 +1,12 @@
+Tested on Ubuntu 18.04 LTS
+
 0) Run
 conda env create -f test_environment.yml
 
 Then activate the environment. If it fails:
 
 1) Make conda enviromnet 
-* conda create -n test python=3.6 anaconda
+* conda create -n yourenvname python=3.6 anaconda
 
 2) Then install the packages
 * conda install -c anaconda tensorflow-gpu=2.0.0
@@ -13,5 +15,8 @@ Then activate the environment. If it fails:
 * conda install -c conda-forge tqdm
 
 
-3) Put Testing_images in dataset folder
-4) Run test.py
+3) Activate your environment and run and command line:
+pip install -U --pre segmentation-models --user
+
+4) Put Testing_images in dataset folder
+5) Run test.py
