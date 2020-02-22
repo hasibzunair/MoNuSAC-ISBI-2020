@@ -16,7 +16,8 @@ Then activate the environment. If it fails:
 
 
 3) Activate your environment and run and command line:
-pip install -U --pre segmentation-models --user
+* pip install efficientnet
+* pip install -U --pre segmentation-models --user
 
 4) Put Testing_images in dataset folder
 5) Run test.py

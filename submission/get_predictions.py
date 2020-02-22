@@ -21,7 +21,7 @@ OpenCV
 import os 
 
 # Install segmentation_models library
-os.system("pip install -U --pre segmentation-models --user")
+#os.system("pip install -U --pre segmentation-models --user")
 
 import time
 import cv2
