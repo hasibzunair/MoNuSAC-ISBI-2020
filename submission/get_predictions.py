@@ -4,9 +4,7 @@ Prediction code for PatchEUnet by the_great_backpropagator
 
 Save final predictions in required format
 
-Install segmentation_models using this command if the below option fails.
- - pip install -U --pre segmentation-models --user 
-
+README.txt for installation instructions.
 
 Major requirements:
 Python: 3.6
@@ -18,11 +16,7 @@ OpenCV
 """
 
 # Import libs
-import os 
-
-# Install segmentation_models library
-#os.system("pip install -U --pre segmentation-models --user")
-
+import os
 import time
 import cv2
 from tqdm import tqdm
@@ -40,6 +34,7 @@ import matplotlib.colors
 from skimage.transform import resize
 import efficientnet.tfkeras
 from tensorflow.keras.models import load_model
+
 
 print("All libraries read correctly!!!!")
 
@@ -76,6 +71,8 @@ PRED_DEST =  os.path.join(ROOT_DIR, "dataset", "the_great_backpropagator_MoNuSAC
 # Create folder prediction parent folder
 create_directory(PRED_DEST)
 
+
+# Load the model
 model = None
 model = load_model('{}/{}.h5'.format(log_path, experiment_name), compile=False)
 #model.summary()
@@ -83,7 +80,7 @@ model = load_model('{}/{}.h5'.format(log_path, experiment_name), compile=False)
 
 
 # Helpers
-def pad(img, pad_size=64):
+def pad(img, pad_size=96):
     """
     Load image from a given path and pad it on the sides, so that eash side is divisible by 96 (network requirement)
     if pad = True:
@@ -148,10 +145,14 @@ def read_nuclei(path):
         
     return img
 
+
+
+def save_nuclei(path, img):
+    "save image"
+    skimage.io.imsave(path, img)
+
     
 def sliding_window(image, step, window):
-    "Function to iterate over the whole image"
-    
     x_loc = []
     y_loc = []
     cells = []
@@ -165,7 +166,6 @@ def sliding_window(image, step, window):
 
 
 def extract_patches(image, step, patch_size):
-    "Extract patches using a 96x96 window"
     
     patches = []
     
@@ -202,6 +202,12 @@ def extract_patches(image, step, patch_size):
     
     return patches
     
+    
+    
+
+# Helper function for data visualization
+import numpy as np
+from skimage.transform import resize
 
 # Helper function for data visualization
 def visualize(**images):
@@ -268,7 +274,6 @@ def predict(im):
 
 
 def whole_slide_predict(whole_image):
-    "Predict the WSI given as input. Return the predicted mask"
     
     #import pdb; pdb.set_trace()
     
@@ -362,6 +367,7 @@ def whole_slide_predict(whole_image):
 
 
 
+
 # Save predictions
 # label_map = {'Epithelial':1, 'Lymphocyte':2, 'Macrophage':4, 'Neutrophil':3, }
 
@@ -382,7 +388,8 @@ for ct in tqdm(range(len(IMAGES_SUB_FOLDER[:]))):
     all_imgs = sorted(glob(IMAGES_SUB_FOLDER[ct] + '/*.tif'))
     
     # Get patient ID
-    pn = IMAGES_SUB_FOLDER[ct].split('.')[0][-23:]
+    #pn = IMAGES_SUB_FOLDER[ct].split('.')[0][-23:]
+    pn = IMAGES_SUB_FOLDER[ct].split('/')[-1]
     
     print("Patient ID ----------------------> : ", pn)
     
@@ -391,7 +398,10 @@ for ct in tqdm(range(len(IMAGES_SUB_FOLDER[:]))):
     create_directory(pn_folder)
     
     # Get all images in the patient folder
-    paths = [s.split('.')[0][-25:] for s in all_imgs]
+    paths = [s.split('/')[-1][:-4] for s in all_imgs]
+    
+    print(paths)
+    
     
     
     # Iterate over the images of a patient
@@ -439,6 +449,8 @@ for ct in tqdm(range(len(IMAGES_SUB_FOLDER[:]))):
         macro_mask = np.where(pred_filt != 4, zero_mask, 4)
         
         # Save masks
+        # Check if last number of uniques is not zero, if it is not then save this mask.
+        # If it zero, it means the mask is empty, so skip this
         if np.unique(epi_mask)[-1] != 0:
                 #np.save("{}/{}.npy".format(epi_path, raw_ct), epi_mask)
                 sio.savemat("{}/{}.mat".format(epi_path, raw_ct), {'epi_mask':epi_mask})
@@ -462,6 +474,6 @@ for ct in tqdm(range(len(IMAGES_SUB_FOLDER[:]))):
                 sio.savemat("{}/{}.mat".format(macro_path, raw_ct), {'macro_mask':macro_mask})
                 
         raw_ct+=1
-        
+    
 
 print("Done!")
