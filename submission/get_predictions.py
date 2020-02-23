@@ -21,7 +21,8 @@ import time
 import cv2
 from tqdm import tqdm
 import numpy as np
-import skimage.draw
+#import skimage.draw
+from skimage import io
 import random
 import keras
 import cv2
@@ -133,7 +134,7 @@ def read_nuclei(path):
     "read raw data"
 
     # Load 4-channel image
-    img = skimage.io.imread(path)
+    img = io.imread(path)
     
     # input image
     if len(img.shape) > 2:
