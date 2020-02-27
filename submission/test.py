@@ -27,7 +27,8 @@ import time
 import cv2
 from tqdm import tqdm
 import numpy as np
-import skimage.draw
+#import skimage.draw
+from skimage import io
 import random
 import keras
 import cv2
