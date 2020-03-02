@@ -20,5 +20,6 @@ Install the packages
 2) Activate your environment and run and command line:
 * pip install efficientnet
 
-3) Make dataset folder and put Testing_images folder in dataset
+3) Make a folder named 'dataset' and put 'Testing images' folder in 'dataset'.
+
 5) Run get_predictions.py
