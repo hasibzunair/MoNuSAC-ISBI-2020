@@ -20,6 +20,8 @@ Install the packages
 2) Activate your environment and run and command line:
 * pip install efficientnet
 
-3) Make a folder named 'dataset' and put 'Testing images' folder in 'dataset'.
+3) Make a folder named 'dataset' in this directory and put 'Testing images' folder in 'dataset'.
 
 5) Run get_predictions.py
+
+6) Results will be stored inside 'dataset' folder under the name 'the_great_backpropagator_MoNuSAC_test_results'

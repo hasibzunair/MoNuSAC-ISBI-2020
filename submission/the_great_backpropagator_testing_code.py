@@ -4,7 +4,7 @@ Prediction code for PatchEUnet by the_great_backpropagator
 
 Save final predictions in required format
 
-README.txt for installation instructions.
+See README.txt for installation instructions.
 
 Major requirements:
 Python: 3.6
@@ -16,12 +16,11 @@ OpenCV
 """
 
 # Import libs
-import os
+import os 
 import time
 import cv2
 from tqdm import tqdm
 import numpy as np
-#import skimage.draw
 from skimage import io
 import random
 import keras
@@ -36,9 +35,12 @@ from skimage.transform import resize
 import efficientnet.tfkeras
 from tensorflow.keras.models import load_model
 
+from scipy import ndimage as ndi
+from skimage.segmentation import watershed
+from skimage.feature import peak_local_max
 
-print("All libraries read correctly!!!!")
 
+warnings.filterwarnings('ignore')
 
 # Helper for dirtectory creation
 def create_directory(directory):
@@ -54,9 +56,9 @@ def create_directory(directory):
 
         
 # Name experiment
-experiment_name = "unet-dtvpl96-exp-7"
+experiment_name = "exp-1"
         
-    
+
 # Root directory of the project
 ROOT_DIR = os.path.abspath(".")
 
@@ -69,7 +71,7 @@ IMAGES_FOLDER = os.path.join(ROOT_DIR, "dataset", "Testing images/")
 # Target destination for storing the prediction masks
 PRED_DEST =  os.path.join(ROOT_DIR, "dataset", "the_great_backpropagator_MoNuSAC_test_results")
 
-# Create folder prediction parent folder
+# Create folder for predictions: parent folder
 create_directory(PRED_DEST)
 
 
@@ -154,6 +156,7 @@ def save_nuclei(path, img):
 
     
 def sliding_window(image, step, window):
+    "Slide over image using a window with step size"
     x_loc = []
     y_loc = []
     cells = []
@@ -167,6 +170,7 @@ def sliding_window(image, step, window):
 
 
 def extract_patches(image, step, patch_size):
+    "Extract patches using sliding window"
     
     patches = []
     
@@ -203,14 +207,8 @@ def extract_patches(image, step, patch_size):
     
     return patches
     
+ 
     
-    
-
-# Helper function for data visualization
-import numpy as np
-from skimage.transform import resize
-
-# Helper function for data visualization
 def visualize(**images):
     """Plot images in one row."""
     
@@ -273,10 +271,19 @@ def predict(im):
     return im
 
 
+def instance_seg(image):
+    "Get instances for each class mask"
+    distance = ndi.distance_transform_edt(image)
+    local_maxi = peak_local_max(distance, indices=False, footprint=np.ones((3, 3)), labels=image)
+    markers = ndi.label(local_maxi)[0]
+    labels = watershed(-distance, markers, mask=image)
+    return labels   
+
+
 
 def whole_slide_predict(whole_image):
     
-    #import pdb; pdb.set_trace()
+    "Slide over WSI, extract patch and predict. Returns WS mask"
     
     # If input image less than patch, infer on whole image
     if whole_image.shape[0] < 96 or whole_image.shape[1] < 96:
@@ -367,7 +374,7 @@ def whole_slide_predict(whole_image):
     return pred
 
 
-
+##################################MAIN FUNCTION BEGINS###############################################
 
 # Save predictions
 # label_map = {'Epithelial':1, 'Lymphocyte':2, 'Macrophage':4, 'Neutrophil':3, }
@@ -402,8 +409,6 @@ for ct in tqdm(range(len(IMAGES_SUB_FOLDER[:]))):
     paths = [s.split('/')[-1][:-4] for s in all_imgs]
     
     print(paths)
-    
-    
     
     # Iterate over the images of a patient
     for i in range(len(all_imgs)):
@@ -449,32 +454,38 @@ for ct in tqdm(range(len(IMAGES_SUB_FOLDER[:]))):
         neu_mask = np.where(pred_filt != 3, zero_mask, 3)
         macro_mask = np.where(pred_filt != 4, zero_mask, 4)
         
+        # Get instances for each class using watershed
+        epi_mask = instance_seg(epi_mask)
+        lym_mask = instance_seg(lym_mask)
+        neu_mask = instance_seg(neu_mask)
+        macro_mask = instance_seg(macro_mask)
+        
+        
         # Save masks
         # Check if last number of uniques is not zero, if it is not then save this mask.
         # If it zero, it means the mask is empty, so skip this
         if np.unique(epi_mask)[-1] != 0:
                 #np.save("{}/{}.npy".format(epi_path, raw_ct), epi_mask)
-                sio.savemat("{}/{}.mat".format(epi_path, raw_ct), {'epi_mask':epi_mask})
+                sio.savemat("{}/{}.mat".format(epi_path, raw_ct), {'n_ary_mask':epi_mask})
         
         raw_ct+=1
 
         if np.unique(lym_mask)[-1] != 0:
                 #np.save("{}/{}.npy".format(lym_path, raw_ct), lym_mask)
-                sio.savemat("{}/{}.mat".format(lym_path, raw_ct), {'lym_mask':lym_mask})
+                sio.savemat("{}/{}.mat".format(lym_path, raw_ct), {'n_ary_mask':lym_mask})
                 
         raw_ct+=1
         
         if np.unique(neu_mask)[-1] != 0:
                 #np.save("{}/{}.npy".format(neu_path, raw_ct), neu_mask)
-                sio.savemat("{}/{}.mat".format(neu_path, raw_ct), {'neu_mask':neu_mask})
+                sio.savemat("{}/{}.mat".format(neu_path, raw_ct), {'n_ary_mask':neu_mask})
                 
         raw_ct+=1
         
         if np.unique(macro_mask)[-1] != 0:
                 #np.save("{}/{}.npy".format(macro_path, raw_ct), macro_mask)
-                sio.savemat("{}/{}.mat".format(macro_path, raw_ct), {'macro_mask':macro_mask})
+                sio.savemat("{}/{}.mat".format(macro_path, raw_ct), {'n_ary_mask':macro_mask})
                 
         raw_ct+=1
     
-
 print("Done!")
