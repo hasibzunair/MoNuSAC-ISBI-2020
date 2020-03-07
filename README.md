@@ -1,6 +1,6 @@
 ### MoNuSAC-ISBI-2020
 
-##### *PatchEUNet: Fully Convolutional Network for Instance Segmentation*
+#### *PatchEUNet: Fully Convolutional Network for Instance Segmentation*
 
 <p align="center">
 <a href="#"><img src="media/resulta.png"></a>
