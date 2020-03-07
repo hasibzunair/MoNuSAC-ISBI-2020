@@ -11,7 +11,7 @@ Code for Multi-organ Nuclei Segmentation and Classification Challenge organised 
 In this work, we implement an end-to-end deep learning framework for automatic nuclei segmentation and classification from H&E stained whole slide images (WSI) of multiple organs (breast, kidney, lung and prostate). The proposed approach, called *PatchEUNet*, leverages a fully convolutional neural network of the U-Net family by replacing the encoder of the U-Net model with an EfficientNet architecture with weights initialized from ImageNet.
 
 <p align="center">
-<a href="#"><img src="media/network.pdf"></a>
+<a href="#"><img src="media/network.png"></a>
 </p>
 
 Since there is a large scale variance in the whole slide images of the MoNuSAC 2020 Challenge, we propose to use a patchwise training scheme to mitigate the problems of multiple scales and limited training data. For the class imbalance problem, we design an objective function defined as a weighted sum of a focal loss and Jaccard distance, resulting in significantly improved performance. During inference, we apply the median filter on the predicted masks in an effort to refine the segmented outputs. From each class mask, we apply watershed algorithm to get the class instances.
