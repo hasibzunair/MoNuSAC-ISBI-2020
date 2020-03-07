@@ -1,7 +1,10 @@
 ### MoNuSAC-ISBI-2020
 
+##### *PatchEUNet: Fully Convolutional Network for Instance Segmentation*
+
 <p align="center">
-<a href="#"><img src="media/result.png"></a>
+<a href="#"><img src="media/resulta.png"></a>
+<a href="#"><img src="media/resultb.png"></a>
 </p>
 
 Code for Multi-organ Nuclei Segmentation and Classification Challenge organised at ISBI 2020.
