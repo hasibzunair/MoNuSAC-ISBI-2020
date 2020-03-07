@@ -56,10 +56,8 @@ NOTE: `segmentation_models` does not have conda distribution. You can install by
 * `MoNuSAC_masks` : contains binary masks generated from `get_mask.ipynb`.
 * `Testing Images`: contains test images, without annotations
 * `data_processedv0` : contains all raw images and the ground truth masks in two folders.
-* `data_processedv4` : (TRAIN FINAL MODEL ON WHOLE PATCH DATA) sliding window patchwise data from original images and masks in `data_processedv0`.
+* `data_processedv4` : sliding window patchwise data from original images and masks in `data_processedv0`.
 * `data_processedv5` : trainval split from `data_processedv4`.
-* `data_processedvpl` : patchwise and trainval split from `data_processedv2`.
-
 
 ### Getting started
 
@@ -68,9 +66,10 @@ NOTE: `segmentation_models` does not have conda distribution. You can install by
 2. Put `MoNuSAC_images_and_annotations` in `dataset` folder
 3. Run `0_get_masks.ipynb`. You should get the MoNuSAC_masks folder in dataset
 4. Run `1_data_process_MoNuSAC.ipynb` to get raw images and their ground truth masks in `data_processedv0`. 
-5. Run `2b_extract_patches.ipynb` to get patches of images and gt masks from the previous raw version to get `data_processedv4` and the 70/30 split `data_processedv5`.
-6. Run `5_train.iynb`. It trains on `data_processedv5`.
+5. Run `2_extract_patches.ipynb` to get patches of images and gt masks from the previous raw version to get `data_processedv4` and the 80/20 split `data_processedv5`.
+6. Run `3_train.iynb`. It trains on `data_processedv5`.
 7. Put `Testing Images` in `dataset` folder.
-8. Run `6b_inference.ipynb` to get final prediction masks.
+8. Run `4_inference.ipynb` to get final prediction masks.
+9. Run `4b_inference.ipynb` to get final prediction masks according to MoNuSAC submission format.
 
-More documentation coming soon....
+More details coming soon....
