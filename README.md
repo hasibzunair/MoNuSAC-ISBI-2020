@@ -3,8 +3,10 @@
 #### *PatchEUNet: Fully Convolutional Network for Instance Segmentation*
 
 <p align="center">
-<a href="#"><img src="media/resulta.png"></a>
-<a href="#"><img src="media/resultb.png"></a>
+<a href="#"><img src="media/result1.png"></a>
+<a href="#"><img src="media/result2.png"></a>
+<a href="#"><img src="media/result3.png"></a>
+<a href="#"><img src="media/result4.png"></a>
 </p>
 
 Code for Multi-organ Nuclei Segmentation and Classification Challenge organised at ISBI 2020.
