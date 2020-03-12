@@ -29,7 +29,6 @@ Results reported in this table are from the validation set made from the entire 
 | Config  | IoU(%) | Dice(%) |
 | ------  | ------ | ------  |
 | U-Net  | 77  | 78 |
-| EfficientNet-B3 U-Net  | 82  | 83 |
 | Proposed | 84 | 87|
 
 Further details will be added after the end of the challenge.
