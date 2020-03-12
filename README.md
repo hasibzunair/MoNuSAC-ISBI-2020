@@ -24,7 +24,7 @@ Since there is a large scale variance in the whole slide images of the MoNuSAC 2
 
 ### Some preliminary results
 
-Results reported in this table are from the validation set made from the entire training set provided for the challenge.
+Results reported in this table are from the validation set made from the entire training set provided for the challenge. These are results of multi-class segmentation of the 4 cell types. 
 
 | Config  | IoU(%) | Dice(%) |
 | ------  | ------ | ------  |
