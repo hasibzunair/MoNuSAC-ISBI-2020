@@ -27,7 +27,7 @@ Since there is a large scale variance in the whole slide images of the MoNuSAC 2
 Results reported in this table are from the validation set made from the entire training set provided for the challenge.
 
 | Config  | IoU(%) | Dice(%) |
-| ------------- | ------------- |
+| ------  | ------ | ------  |
 | U-Net  | 77  | 78 |
 | EfficientNet-B3 U-Net  | 82  | 83 |
 | Proposed | 84 | 87|
