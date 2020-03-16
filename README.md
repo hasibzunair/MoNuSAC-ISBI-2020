@@ -1,6 +1,6 @@
-### MoNuSAC-ISBI-2020
-
 #### *PatchEUNet: Fully Convolutional Network for Instance Segmentation*
+
+11th place solution to Multi-organ nuclei segmentation and classification challenge. The proposed algorithm scored an Average Panoptic Quality of 0.1838 on the test set. Details about the problem can be found at [URL](https://monusac-2020.grand-challenge.org/).
 
 <p align="center">
 <a href="#"><img src="media/result1.png"></a>
@@ -19,8 +19,7 @@ In this work, we implement an end-to-end deep learning framework for automatic n
 <a href="#"><img src="media/network.png"></a>
 </p>
 
-Since there is a large scale variance in the whole slide images of the MoNuSAC 2020 Challenge, we propose to use a patchwise training scheme to mitigate the problems of multiple scales and limited training data. For the class imbalance problem, we design an objective function defined as a weighted sum of a focal loss and Jaccard distance, resulting in significantly improved performance. During inference, we apply the median filter on the predicted masks in an effort to refine the segmented outputs. Finally for each class mask, we apply watershed algorithm to get the class instances. Details about the problem can be found at [URL](https://monusac-2020.grand-challenge.org/).
-
+Since there is a large scale variance in the whole slide images of the MoNuSAC 2020 Challenge, we propose to use a patchwise training scheme to mitigate the problems of multiple scales and limited training data. For the class imbalance problem, we design an objective function defined as a weighted sum of a focal loss and Jaccard distance, resulting in significantly improved performance. During inference, we apply the median filter on the predicted masks in an effort to refine the segmented outputs. Finally for each class mask, we apply watershed algorithm to get the class instances.
 
 ### Some preliminary results
 
@@ -30,8 +29,6 @@ Results reported in this table are from the validation set made from the entire 
 | ------  | ------ | ------  |
 | U-Net  | 77  | 78 |
 | Proposed | 84 | 87|
-
-Further details will be added after the end of the challenge.
 
 ### Requirements
 * Python: 3.6
