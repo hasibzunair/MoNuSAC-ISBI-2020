@@ -1,6 +1,6 @@
-#### *PatchEUNet: Fully Convolutional Network for Instance Segmentation*
+## *PatchEUNet: Fully Convolutional Network for Instance Segmentation*
 
-11th place solution to Multi-organ nuclei segmentation and classification challenge. The proposed algorithm scored an Average Panoptic Quality of 0.1838 on the test set. Details about the problem can be found at [URL](https://monusac-2020.grand-challenge.org/).
+11th place solution to Multi-organ nuclei segmentation and classification challenge. The proposed algorithm scored an Average Panoptic Quality(PQ) of 0.1838 on the test set. Details about the problem can be found at [URL](https://monusac-2020.grand-challenge.org/).
 
 <p align="center">
 <a href="#"><img src="media/result1.png"></a>
