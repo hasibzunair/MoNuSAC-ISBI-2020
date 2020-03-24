@@ -1,6 +1,6 @@
-## *PatchEUNet: Fully Convolutional Network for Instance Segmentation*
+### *Fully Convolutional Networks for Instance Segmentation*
 
-11th place solution to Multi-organ nuclei segmentation and classification challenge (MoNuSAC 2020) organised at ISBI2020. The proposed algorithm scored an Average Panoptic Quality(PQ) of 0.1838 on the test set. Details about the problem can be found at [URL](https://monusac-2020.grand-challenge.org/).
+11th place solution to Multi-organ nuclei segmentation and classification challenge (MoNuSAC 2020) organised at ISBI2020. The proposed method scored an Average Panoptic Quality(PQ) of 0.1838 on the test set. Details about the problem can be found at [URL](https://monusac-2020.grand-challenge.org/).
 
 <p align="center">
 <a href="#"><img src="media/result1.png"></a>
@@ -43,7 +43,7 @@ Run this command to make environment
 conda env create -f environment.yml
 ```
 
-OR you can make a new environment by:
+*OR* you can make a new environment by:
 
 ```
 conda create -n yourenvname python=3.6 anaconda
@@ -73,7 +73,7 @@ NOTE: `segmentation_models` does not have conda distribution. You can install by
 
 ### Getting started
 
-0. Clone repository
+0. Clone repository (obviously!)
 1. Make `dataset` folder
 2. Put `MoNuSAC_images_and_annotations` in `dataset` folder
 3. Run `0_get_masks.ipynb`. You should get the MoNuSAC_masks folder in dataset
@@ -84,5 +84,3 @@ NOTE: `segmentation_models` does not have conda distribution. You can install by
 8. Run `3c_load_test_data.ipynb`. Outputs `test_images` folder with all test images.
 8. Run `4_inference.ipynb` to get final prediction masks from `test_images`. (For visualization)
 9. Run `4b_inference.ipynb` to get final prediction masks according to MoNuSAC submission format.
-
-More details coming soon....
