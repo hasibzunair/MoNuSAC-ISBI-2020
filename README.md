@@ -90,5 +90,5 @@ NOTE: `segmentation_models` does not have conda distribution. You can install by
 
 Weight file for the multiclass segmentation model is available at [releases](https://github.com/hasibzunair/MoNuSAC-ISBI-2020/releases/tag/v0.0.1). 
 
-### LICENSE
+### License
 Your driver license.
