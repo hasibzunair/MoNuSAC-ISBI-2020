@@ -84,3 +84,11 @@ NOTE: `segmentation_models` does not have conda distribution. You can install by
 8. Run `3c_load_test_data.ipynb`. Outputs `test_images` folder with all test images.
 8. Run `4_inference.ipynb` to get final prediction masks from `test_images`. (For visualization)
 9. Run `4b_inference.ipynb` to get final prediction masks according to MoNuSAC submission format.
+
+
+### Model
+
+Weight file for the multiclass segmentation model is available at [releases](https://github.com/hasibzunair/MoNuSAC-ISBI-2020/releases/tag/v0.0.1). 
+
+### LICENSE
+Your driver license.
