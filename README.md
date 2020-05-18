@@ -1,6 +1,6 @@
 ### *Fully Convolutional Networks for Instance Segmentation*
 
-11th place solution to Multi-organ nuclei segmentation and classification challenge (MoNuSAC 2020) organised at ISBI 2020. 
+11th place solution to Multi-organ nuclei segmentation and classification challenge workshop (MoNuSAC 2020) organised at ISBI 2020. 
 
 The final submission scored an Average Panoptic Quality(PQ) of 0.1838 on the test set. Details about the problem can be found at [URL](https://monusac-2020.grand-challenge.org/).
 
