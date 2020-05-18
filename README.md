@@ -1,8 +1,10 @@
 ### *Fully Convolutional Networks for Instance Segmentation*
 
-11th place solution to Multi-organ nuclei segmentation and classification challenge (MoNuSAC 2020) organised at ISBI2020. The proposed method scored an Average Panoptic Quality(PQ) of 0.1838 on the test set. Details about the problem can be found at [URL](https://monusac-2020.grand-challenge.org/).
+11th place solution to Multi-organ nuclei segmentation and classification challenge (MoNuSAC 2020) organised at ISBI 2020. 
 
-<p align="center">
+The final submission scored an Average Panoptic Quality(PQ) of 0.1838 on the test set. Details about the problem can be found at [URL](https://monusac-2020.grand-challenge.org/).
+
+<p align="center">`
 <a href="#"><img src="media/result1.png"></a>
 <a href="#"><img src="media/result2.png"></a>
 <a href="#"><img src="media/result3.png"></a>
@@ -43,7 +45,7 @@ Run this command to make environment
 conda env create -f environment.yml
 ```
 
-*OR* you can make a new environment by:
+*OR* you can make you own environment by:
 
 ```
 conda create -n yourenvname python=3.6 anaconda
@@ -89,6 +91,10 @@ NOTE: `segmentation_models` does not have conda distribution. You can install by
 ### Model
 
 Weight file for the multiclass segmentation model is available at [releases](https://github.com/hasibzunair/MoNuSAC-ISBI-2020/releases/tag/v0.0.1). 
+
+### Acknowledgements 
+
+Model definition and baseline training scripts are based on https://segmentation-models.readthedocs.io/en/latest/install.html.
 
 ### License
 Your driver's license.
