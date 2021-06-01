@@ -2,7 +2,7 @@
 
 11th place solution to Multi-organ nuclei segmentation and classification challenge (MoNuSAC 2020) organised at ISBI 2020. 
 
-The final submission scored an Average Panoptic Quality(PQ) of 0.1838 on the test set. Descirption of the method summarized in this [report](ISBI 2020 MoNuSAC Workshop Challenge Paper.pdf). Details about the challenge at this [URL](https://monusac-2020.grand-challenge.org/Results/).
+The final submission scored an Average Panoptic Quality(PQ) of 0.1838 on the test set. Descirption of the method summarized in this [report](https://github.com/hasibzunair/MoNuSAC-ISBI-2020/blob/master/ISBI%202020%20MoNuSAC%20Workshop%20Challenge%20Paper.pdf). Details about the challenge at this [URL](https://monusac-2020.grand-challenge.org/Results/).
 
 <p align="center">`
 <a href="#"><img src="media/result1.png"></a>
