@@ -1,6 +1,8 @@
-### Patch Efficient Convolutional Network for Multi-Organ Nuclei Segmentation and Classification
+# Patch Efficient Convolutional Network for Multi-Organ Nuclei Segmentation and Classification
 
 11th place solution to Multi-organ nuclei segmentation and classification challenge (MoNuSAC 2020) organised at ISBI 2020. 
+
+Joint paper titled *MoNuSAC2020: A Multi-organ Nuclei Segmentation and Classification Challenge* accepted for publication at IEEE Transactions on Medical Imaging (TMI)
 
 The final submission scored an Average Panoptic Quality(PQ) of 0.1838 on the test set. Descirption of the method summarized in this [report](https://github.com/hasibzunair/MoNuSAC-ISBI-2020/blob/master/ISBI%202020%20MoNuSAC%20Workshop%20Challenge%20Paper.pdf). Details about the challenge at this [URL](https://monusac-2020.grand-challenge.org/Results/).
 
@@ -97,4 +99,4 @@ Weight file for the multiclass segmentation model is available at [releases](htt
 Model definition and baseline training scripts are based on https://segmentation-models.readthedocs.io/en/latest/install.html.
 
 ### License
-Your driver's license.
+MIT
