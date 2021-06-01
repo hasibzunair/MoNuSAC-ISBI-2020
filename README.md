@@ -4,7 +4,12 @@
 
 Joint paper titled *MoNuSAC2020: A Multi-organ Nuclei Segmentation and Classification Challenge* accepted for publication at IEEE Transactions on Medical Imaging (TMI)
 
-The final submission scored an Average Panoptic Quality(PQ) of 0.1838 on the test set. Descirption of the method summarized in this [report](https://github.com/hasibzunair/MoNuSAC-ISBI-2020/blob/master/ISBI%202020%20MoNuSAC%20Workshop%20Challenge%20Paper.pdf). Details about the challenge at this [URL](https://monusac-2020.grand-challenge.org/Results/).
+### Resources
+* Paper (Will be added)
+* [Report](https://github.com/hasibzunair/MoNuSAC-ISBI-2020/blob/master/ISBI%202020%20MoNuSAC%20Workshop%20Challenge%20Paper.pdf)
+* [Leaderboard](https://monusac-2020.grand-challenge.org/Results/)
+* [Slides](https://docs.google.com/presentation/d/11ym6YdXazpAhkqH348X8fyHmZEoLd81xozrPHAJko44/edit?usp=sharing)
+* [Video (Time - 1:58:46)](https://youtu.be/QztsH4IYQRA)
 
 <p align="center">`
 <a href="#"><img src="media/result1.png"></a>
