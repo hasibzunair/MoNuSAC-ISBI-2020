@@ -1,15 +1,16 @@
 # Patch Efficient Convolutional Network for Multi-Organ Nuclei Segmentation and Classification
 
-11th place solution to Multi-organ nuclei segmentation and classification challenge (MoNuSAC 2020) organised at ISBI 2020. 
+This code is part of supplementary materials for our method which acheived 11th place among 170 teams in the ISBI 2020 MoNuSAC Workshop.
 
-Joint paper titled *MoNuSAC2020: A Multi-organ Nuclei Segmentation and Classification Challenge* accepted for publication at IEEE Transactions on Medical Imaging (TMI)
+A joint paper which summarizes the dataset, and methods developed by various participants titled *MoNuSAC2020: A Multi-organ Nuclei Segmentation and Classification Challenge* is accepted for publication at IEEE Transactions on Medical Imaging (TMI)
+
 
 ### Resources
 * Paper (Will be added)
 * [Report](https://github.com/hasibzunair/MoNuSAC-ISBI-2020/blob/master/ISBI%202020%20MoNuSAC%20Workshop%20Challenge%20Paper.pdf)
 * [Leaderboard](https://monusac-2020.grand-challenge.org/Results/)
 * [Slides](https://docs.google.com/presentation/d/11ym6YdXazpAhkqH348X8fyHmZEoLd81xozrPHAJko44/edit?usp=sharing)
-* [Video (Time - 1:58:46)](https://youtu.be/QztsH4IYQRA)
+* [ISBI 2020 MoNuSAC Workshop Video Presentation (Time - 1:58:46)](https://youtu.be/QztsH4IYQRA)
 
 <p align="center">`
 <a href="#"><img src="media/result1.png"></a>
