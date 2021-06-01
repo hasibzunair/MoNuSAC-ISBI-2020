@@ -1,4 +1,4 @@
-### *Fully Convolutional Networks for Instance Segmentation*
+### Patch Efficient Convolutional Network for Multi-Organ Nuclei Segmentation and Classification
 
 11th place solution to Multi-organ nuclei segmentation and classification challenge (MoNuSAC 2020) organised at ISBI 2020. 
 
