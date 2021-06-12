@@ -6,8 +6,8 @@ A joint paper which summarizes the dataset, and methods developed by various par
 
 
 ### Resources
-* [Paper](https://ieeexplore.ieee.org/document/9446924)
-* [Report](https://github.com/hasibzunair/MoNuSAC-ISBI-2020/blob/master/ISBI%202020%20MoNuSAC%20Workshop%20Challenge%20Paper.pdf)
+* [TMI Paper](https://ieeexplore.ieee.org/document/9446924)
+* [Technical Report (PDF)](https://github.com/hasibzunair/MoNuSAC-ISBI-2020/blob/master/ISBI%202020%20MoNuSAC%20Workshop%20Challenge%20Paper.pdf)
 * [Leaderboard](https://monusac-2020.grand-challenge.org/Results/)
 * [Slides](https://docs.google.com/presentation/d/11ym6YdXazpAhkqH348X8fyHmZEoLd81xozrPHAJko44/edit?usp=sharing)
 * [ISBI 2020 MoNuSAC Workshop Oral Presentation (Time - 1:58:46)](https://youtu.be/QztsH4IYQRA)
